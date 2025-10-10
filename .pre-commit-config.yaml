@@ -1,0 +1,15 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ruff
+        name: ruff
+        language: python
+        types_or: [python, pyi]
+        require_serial: true
+        entry: ruff check . --force-exclude --extend-select I --fix
+      - id: ruff-format
+        name: ruff-format
+        language: python
+        types_or: [python, pyi]
+        require_serial: true
+        entry: ruff format . --force-exclude

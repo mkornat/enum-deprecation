@@ -1,0 +1,90 @@
+[project]
+name = "enum-deprecation"
+version = "0.1.0"
+description = "Deprecate individual Enum members with warnings, for Enum/IntEnum/StrEnum/custom mixins."
+authors = [
+    {name = "Marcin Kornat",email = "marcin.kornat@gmail.com"}
+]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.11,<4.0"
+keywords = ["enum", "deprecation", "warnings", "typing", "mypy", "pep561"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Typing :: Typed"
+]
+dependencies = []
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest (>=8.4.2,<9.0.0)",
+    "tox (>=4.31.0,<5.0.0)",
+    "ruff (>=0.14.0,<0.15.0)",
+    "mypy (>=1.18.2,<2.0.0)",
+    "pre-commit (>=4.3.0,<5.0.0)",
+    "poetry-core (>=2.0.0)"
+]
+
+[tool.poetry]
+packages = [{ include = "enum_deprecation" }]
+include = [
+    { path = "enum_deprecation/py.typed", format = ["sdist", "wheel"] },
+    { path = "enum_deprecation/_enum_deprecation.pyi", format = ["sdist", "wheel"] },
+    { path = "README.md", format = ["sdist", "wheel"] },
+    { path = "LICENSE", format = ["sdist", "wheel"] }
+]
+
+[tool.tox]
+env_list = [
+    "py311",
+    "py312",
+    "py313",
+]
+
+[tool.tox.env_run_base]
+description = "Run tests with pytest"
+deps = [
+    "pytest>=8.4.2",
+]
+commands = [
+    ["pytest", "-q"],
+]
+
+[tool.tox.envs.py311]
+package = true
+
+[tool.tox.envs.py312]
+package = true
+
+[tool.tox.envs.py313]
+package = true
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.ruff.lint.isort]
+order-by-type = true
+lines-between-types = 1
+relative-imports-order = "closest-to-furthest"
+extra-standard-library = ["typing"]
+section-order = [
+    "future",
+    "standard-library",
+    "third-party",
+    "first-party",
+    "local-folder",
+]
+known-first-party = []
