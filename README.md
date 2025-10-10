@@ -3,8 +3,8 @@
 
 [![PyPI](https://img.shields.io/pypi/v/enum-deprecation.svg)](https://pypi.org/project/enum-deprecation/)
 [![Python Versions](https://img.shields.io/pypi/pyversions/enum-deprecation.svg)](https://pypi.org/project/enum-deprecation/)
-[![License](https://img.shields.io/pypi/l/enum-deprecation.svg)](https://github.com/yourname/enum-deprecation/blob/main/LICENSE)
-[![Tests](https://github.com/yourname/enum-deprecation/actions/workflows/tests.yml/badge.svg)](https://github.com/yourname/enum-deprecation/actions)
+[![License](https://img.shields.io/pypi/l/enum-deprecation.svg)](https://github.com/mkornat/enum-deprecation/blob/master/LICENSE)
+[![Tests](https://github.com/mkornat/enum-deprecation/actions/workflows/workflow.yml/badge.svg)](https://github.com/mkornat/enum-deprecation/actions)
 
 > Add **deprecation warnings** to your Python `Enum` members —
 > works for all Enum subclasses (`Enum`, `IntEnum`, `StrEnum`, or your own mixins).
@@ -144,9 +144,5 @@ MIT License © 2025 Marcin Kornat
 ## 🧭 Links
 
 * 📘 PyPI: [https://pypi.org/project/enum-deprecation/](https://pypi.org/project/enum-deprecation/)
-* 🧑‍💻 Source: [https://github.com/yourname/enum-deprecation](https://github.com/yourname/enum-deprecation)
+* 🧑‍💻 Source: [https://github.com/mkornat/enum-deprecation](https://github.com/mkornat/enum-deprecation)
 * 🧪 Tests & CI: see `.github/workflows/tests.yml`
-
----
-
-Would you like me to include a **short “Development / Contributing”** section (for running tests, lint, etc.) and a **“Changelog”** stub for PyPI’s long description?
