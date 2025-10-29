@@ -19,7 +19,7 @@
   * by attribute: `MyEnum.OLD`
   * by name: `MyEnum["OLD"]`
   * by value: `MyEnum(value)`
-* 🧾 Fully type-checked (`mypy --strict`) and tested on **Python 3.11 – 3.13**
+* 🧾 Fully type-checked (`mypy --strict`) and tested on **Python 3.11 – 3.14**
 * 🧱 Compatible with **SQLAlchemy** enums
 * 🛡 Zero runtime dependencies
 

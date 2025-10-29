@@ -1,6 +1,6 @@
 [project]
 name = "enum-deprecation"
-version = "0.1.0"
+version = "0.1.1"
 description = "Deprecate individual Enum members with warnings, for Enum/IntEnum/StrEnum/custom mixins."
 authors = [
     {name = "Marcin Kornat",email = "marcin.kornat@gmail.com"}
@@ -16,6 +16,7 @@ classifiers = [
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
   "Typing :: Typed"
 ]
 dependencies = []
@@ -50,6 +51,7 @@ env_list = [
     "py311",
     "py312",
     "py313",
+    "py314"
 ]
 
 [tool.tox.env_run_base]
@@ -68,6 +70,9 @@ package = true
 package = true
 
 [tool.tox.envs.py313]
+package = true
+
+[tool.tox.envs.py314]
 package = true
 
 [tool.ruff.format]
